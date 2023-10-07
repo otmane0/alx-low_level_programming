@@ -1,12 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* Additional headers can go here */
 
 /**
- * main - Entry point
- *
- *              from 'a' to 'z' using a while loop.
- *
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -19,3 +16,5 @@ int main(void)
         ch++;
     }
 
+    return (0);
+}
