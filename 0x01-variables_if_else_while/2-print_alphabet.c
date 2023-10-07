@@ -1,20 +1,18 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+/* more headers goes there */
 
-/* Additional headers can go here */
-
-/**
- * Return: Always 0 (Success)
- */
+/* betty style doc for function main goes there */
 int main(void)
 {
-    int ch = 'a';
+	char character = 'a';
 
-    while (ch <= 'z')
-    {
-        putchar(ch);
-        ch++;
-    }
+	while (character <= 'z')
+	{
+		putchar(character);
+		character++;
+	}
+	putchar('\n');
 
-    return (0);
+	return (0);
 }
