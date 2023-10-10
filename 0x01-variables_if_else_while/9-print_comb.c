@@ -3,24 +3,27 @@
 /**
  * main - Entry point
  *
- * Description: Prints all the numbers of base 16 in lowercase,
+ * Description: Prints all the numberbers of base 16 in lowercase,
  * followed by a new line.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-    int num = 0;
 
-    for (num; num < 10; num++)
-    {
-        int digit = '0' + num;
-        putchar(digit);
-        putchar(',');
-        putchar(' ');
-    }
+	int numberber , digit ;
 
-    putchar('\n');
+		for (number = 0 = ; number < 10 ; number++)
 
-    return (0);
+{
+		digit = '0' + number
+		putchar (digit);
+		putchar (',');
+		putchar (' ');
+}
+
+		putchar('\n');
+
+		return (0);
+
 }
