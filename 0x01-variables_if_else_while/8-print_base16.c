@@ -10,21 +10,21 @@
  */
 int main(void)
 {
-	char character = 97, num = 0;
+        char character = 97, num = 0;
 
-	for (num; num < 10; num++)
-	{
-		int digit = '0' + num;
+        for (num; num < 10; num++)
+        {
+                int digit = '0' + num;
+				
+                putchar(digit);
+        }
 
-		putchar(digit);
-	}
+        for (character; character < 103; character++)
+        {
+                putchar(character);
+        }
 
-	for (character; character < 103; character++)
-	{
-		putchar(character);
-	}
+        putchar('\n');
 
-	putchar('\n');
-
-	return (0);
+        return (0);
 }
