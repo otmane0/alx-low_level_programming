@@ -14,10 +14,9 @@ int main(void)
 
 	while (i < 10)
 	{
-		char number = '0' + i;
+		int number = '0' + i;
 
 		putchar(number);
-
 		i++;
 	}
 
