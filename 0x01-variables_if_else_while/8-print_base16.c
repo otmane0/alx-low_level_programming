@@ -1,26 +1,29 @@
 #include <stdio.h>
-
 /**
  * main - Entry point
- *
- * Description: Prints all the numbers of base 16 in lowercase,
- * followed by a new line.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
+        int digit = 0;
+        char hexDigit;
 
-		for (char character = '0' ; character <= 102 ; character++)
-{
-			putchar (character);
-				if (character == 57)
-					character += 39;
+        while (digit < 16)
+        {
+                if (digit < 10)
+        {
+                hexDigit = digit + '0';
+        }
+                else
+        {
+                hexDigit = digit - 10 + 'a';
+        }
+                putchar(hexDigit);
+                digit++;
+        }
 
+        putchar('\n');
+        return (0);
 }
 
-		putchar('\n');
-
-		return (0);
-
-}
