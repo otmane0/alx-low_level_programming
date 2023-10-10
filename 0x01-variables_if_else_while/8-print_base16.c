@@ -6,23 +6,25 @@
  */
 int main(void)
 {
-        int digit = 0;
-        char hexDigit;
+		int digit = 0;
+		char hexDigit;
 
-        while (digit < 16)
-        {
-                if (digit < 10)
-        {
-                hexDigit = digit + '0';
-        }
-                else
-        {
-                hexDigit = digit - 10 + 'a';
-        }
-                putchar(hexDigit);
-                digit++;
-        }
+		while (digit < 16)
+{
+		if (digit < 10)
+		{
+			hexDigit = digit + '0';
+		}
+			else
+		{
+			hexDigit = digit - 10 + 'a';
+		}
+				putchar(hexDigit);
 
-        putchar('\n');
-        return (0);
+				digit++;
 }
+
+		putchar('\n');
+		return (0);
+}
+
