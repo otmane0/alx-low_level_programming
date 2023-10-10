@@ -11,12 +11,16 @@
 int main(void)
 {
 
-        for (char character = '0'; character <= 'f'; character++)
-        {
-                putchar(character);
-        }
+		for (char character = '0' ; character <= 102 ; character++)
+{
+			putchar (character);
+				if (character == 57)
+					character += 39;
 
-        putchar('\n');
+}
 
-        return (0);
+		putchar('\n');
+
+		return (0);
+
 }
