@@ -10,22 +10,17 @@
  */
 int main(void)
 {
-	int num = 0;
+    int num = 0;
 
-	for (num; num < 10; num++)
-	{
-		int digit = '0' + num;
+    for (num; num < 10; num++)
+    {
+        int digit = '0' + num;
+        putchar(digit);
+        putchar(',');
+        putchar(' ');
+    }
 
-		putchar(digit);
+    putchar('\n');
 
-		if (num < 9)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-	}
-
-	putchar('\n');
-
-	return (0);
+    return (0);
 }
