@@ -21,3 +21,4 @@ for (min = 0; min <= 59; min++)
         _putchar(('\n');
 }
 }
+}
