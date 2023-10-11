@@ -1,13 +1,16 @@
 #include"main.h"
 
 /**
- * print_alpahbet_x10
- * Return 0
- * description: function print_alphabet_x10
+ * print_alphabet_x10 - Prints the lowercase alphabet ten times,
+ * followed by a new line.
  *
- * Function definition 
-*/
-
+ * Description:
+ * This function prints the lowercase alphabet
+ * from 'a' to 'z' ten times. Each alphabet sequence
+ * is followed by a newline character.
+ * The function uses the _putchar function to print characters
+ * to the standard output.
+ */
 void print_alphabet_x10(void)
 {
 	int line, character;
