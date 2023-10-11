@@ -14,12 +14,9 @@
  * Return: 1 if 'c' is an alphabetic letter, 0 otherwise.
  */
 int _isalpha(int c);
+
 {
-if (char ch >= 65 && ch <= 97)
-{
-return (1);
-}
-if else(char ch >= 97 && ch <= 122)
+if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 {
 return (1);
 }
