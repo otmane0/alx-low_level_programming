@@ -2,10 +2,7 @@
 
 /**
  * print_alpahbet_x10
- * Return 0
  * description: function print_alphabet_x10
- *
- * Function definition 
 */
 
 void print_alphabet_x10(void)
