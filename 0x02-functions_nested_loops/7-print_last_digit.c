@@ -10,12 +10,21 @@ int print_last_digit(int n)
 {
 	int lastdig;
 
-	if (n < 0)
+	if (n == INT_MIN)
 	{
-		n = -n;
+		n = -(n + 1); // Handle INT_MIN by making it one less
+		lastdig = (n + 1) % 10;
+	}
+	else
+	{
+		if (n < 0)
+		{
+			n = -n;
+		}
+
+		lastdig = n % 10;
 	}
 
-	lastdig = n % 10;
 	_putchar('0' + lastdig);
 
 	return (lastdig);
