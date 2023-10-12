@@ -3,15 +3,20 @@
 /**
  * print_most_numbers - Prints all numbers from 0 to 9 except for 2 and 5.
  */
-void print_most_numbers(void)
+
+void print_most_numbers(void);
 {
-char c = '0';
-while (c <= '9')
+char c = 48;
+while (c >= 48 && c <= 57)
 {
-if (c != '2' && c != '5')
+if (c != 50  && c != 52)
 {
 putchar (c);
+putchar ('\n')
+
 }
 c++;
+
 }
+
 }
