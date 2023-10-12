@@ -9,23 +9,13 @@
 int print_last_digit(int n)
 {
 	int lastdig;
+if (n < 0)
+{
+lastdig = -1 * (n % 10);
+}
+else
+	lastdig = n % 10;
 
-	if (n == INT_MIN)
-	{
-		n = -(n + 1); // Handle INT_MIN by making it one less
-		lastdig = (n + 1) % 10;
-	}
-	else
-	{
-		if (n < 0)
-		{
-			n = -n;
-		}
-
-		lastdig = n % 10;
-	}
-
-	_putchar('0' + lastdig);
-
-	return (lastdig);
+_putchar(lastdig + '0');
+return (lastdig);
 }
