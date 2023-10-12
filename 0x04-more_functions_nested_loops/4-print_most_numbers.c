@@ -11,6 +11,7 @@ while (c <= '9')
 if (c != '2' && c != '4')
 {
 putchar (c);
+putchar ('\n');
 }
 c++;
 }
