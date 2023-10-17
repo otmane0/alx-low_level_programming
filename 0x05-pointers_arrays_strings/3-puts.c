@@ -8,7 +8,7 @@ void _puts(char *str)
 {
 	int line ;
 
-	for (line = 0 ; str[line] != '\0' ; line++ )
+	for (line = 0 ; str[line] != '\0' ; line++)
 		putchar(str[line]);
 	putchar ('\n');
 }
