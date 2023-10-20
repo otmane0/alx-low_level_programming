@@ -6,6 +6,7 @@
  * _strncat - Concatenates two strings.
  * @dest: The destination string.
  * @src: The source string to be appended.
+ * @n: The source string to be appended.
  * Return: return to @dest.
  */
 
