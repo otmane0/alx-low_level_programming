@@ -1,15 +1,5 @@
-int i;
+#include "main.h"
 
-for (i = 0; separators[i] != '\0'; i++)
-{
-	if (c == separators[i])
-	{
-		return (1);
-	}
-}
-
-return (0);
-}
 
 /**
  * cap_string - Capitalizes all words of a string.
@@ -19,6 +9,7 @@ return (0);
 char *cap_string(char *str)
 {
 	int i = 0;
+
 
 	if (str[i] >= 'a' && str[i] <= 'z')
 	{
