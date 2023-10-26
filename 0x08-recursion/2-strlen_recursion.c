@@ -3,8 +3,9 @@
 /**
  * _strlen_recursion - Prints a string followed
  * by a new line using recursion.
+ * @lg: a variable.
  * @s: the input string.
- * Return.
+ * Return to @lg.
  */
 
 int _strlen_recursion(char *s)
@@ -14,5 +15,5 @@ if (*s > '\0')
 {
 	lg += _strlen_recursion(s + 1) + 1;
 }
-return (lg);
+return(lg);
 }
