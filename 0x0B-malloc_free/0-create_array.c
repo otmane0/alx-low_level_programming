@@ -17,10 +17,9 @@ if (size == 0 || n == 0)
 else
 
 {
-	while (size >= 0)
+	while (size--)
 	{
 		n[size] = c;
-		size--;
 	}
 	return (n);
 }
