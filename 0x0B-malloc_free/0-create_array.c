@@ -17,7 +17,7 @@ if (size == 0 || n == 0)
 else
 
 {
-	for (int i = 0; size >= 0; size--)
+	while (size--)
 	{
 		n[size] = c;
 	}
