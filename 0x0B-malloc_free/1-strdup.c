@@ -2,38 +2,32 @@
 #include <stdlib.h>
 
 /**
- * _strdup - this is the function.
- * @str: the size of char.
- * Return: 0 if size 0.
-*/
+ * _strdup - dups a string.
+ * @str: The input string.
+ * Return: A pointer to the dupd string.
+ */
 
 char *_strdup(char *str)
 {
-	int i, size = 0;
+	if (str == NULL)
+		return (NULL);
 
-	if (str == 0)
+	int size = 0;
 
+	while (str[size] != '\0')
+		size++;
+
+	char *dup = malloc((size + 1) * sizeof(char));
+
+	if (dup == NULL)
+		return (NULL);
+
+	for (int i = 0; i < size; i++)
 	{
-		return (0);
+		dup[i] = str[i];
 	}
-	else
-	{
-		for (int i = 0; str[i] != '\0'; i++)
-		{
-			size++;
-		}
 
-		char *n = malloc(size * sizeof(*str));
+	dup[size] = '\0';
 
-		if (n == 0)
-
-		return (0);
-		else
-		{
-			for (i = 0; i < size; i++)
-			n[i] = str;
-			putchar (n[i]);
-		}
-		free(n);
-	}
+	return (dup);
 }
