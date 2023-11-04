@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "array": "c",
+        "stdio.h": "c",
+        "1-memcpy.C": "cpp"
+    }
+}
