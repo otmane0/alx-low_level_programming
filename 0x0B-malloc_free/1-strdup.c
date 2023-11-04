@@ -2,18 +2,16 @@
 #include <stdlib.h>
 
 /**
- * _strdup - dups a string.
+ * _strdup - Dups a string.
  * @str: The input string.
- * Return: A pointer to the dupd string.
+ * Return: A pointer to the dupd string, or NULL on failure.
  */
-
 char *_strdup(char *str)
 {
 	if (str == NULL)
 		return (NULL);
 
 	int size = 0;
-
 	while (str[size] != '\0')
 		size++;
 
