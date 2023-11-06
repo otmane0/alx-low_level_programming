@@ -2,12 +2,9 @@
 #include "dog.h"
 
 /**
- * print_dog - function for type
- * @d: type of code.
- * @name: the name of the dog
- * @age: the age.
- * @owner: the owner.
-*/
+ * print_dog - Prints the details of a struct dog.
+ * @d: A pointer to a struct dog.
+ */
 
 
 void print_dog(struct dog *d)
