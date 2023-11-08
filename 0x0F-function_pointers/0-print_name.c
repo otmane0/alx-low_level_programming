@@ -11,4 +11,8 @@ void print_name(char *name, void (*f)(char *))
 {
 
 	void (*f)(char *) = &name;
+	int i;
+
+	for (i = 0; name[i] != '\0'; i++)
+	putchar(name[0]);
 }
