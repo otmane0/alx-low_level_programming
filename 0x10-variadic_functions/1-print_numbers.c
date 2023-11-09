@@ -20,7 +20,7 @@ unsigned int i;
 
 if (separator == NULL)
 {
-
+	separator = "";
 }
 else
 {
