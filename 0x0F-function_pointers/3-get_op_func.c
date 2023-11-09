@@ -2,6 +2,8 @@
 
 /**
  * get_op_func - Selects the correct function to perform the operation.
+ * @s: is s.
+ * Return: value.
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -23,7 +25,5 @@ int (*get_op_func(char *s))(int, int)
 		i++;
 	}
 
-	printf("Error\n");
-	exit(99);
 	return (NULL);
 }
