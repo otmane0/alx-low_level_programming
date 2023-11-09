@@ -10,8 +10,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 
-	if (n < 0)
+	if (!n)
 	{
+		printf("\n");
 		return;
 	}
 if (separator == NULL)
