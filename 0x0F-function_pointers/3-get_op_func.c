@@ -1,10 +1,7 @@
 #include "3-calc.h"
 
 /**
- * get_op_func - selects the correct function to perform the operation
- * @s: operator passed as argument to the program
- *
- * Return: pointer to the function corresponding to the operator, or NULL
+ * get_op_func - Selects the correct function to perform the operation.
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -26,5 +23,7 @@ int (*get_op_func(char *s))(int, int)
 		i++;
 	}
 
+	printf("Error\n");
+	exit(99);
 	return (NULL);
 }
