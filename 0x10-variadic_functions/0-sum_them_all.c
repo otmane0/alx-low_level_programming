@@ -17,7 +17,7 @@ int sum_them_all(const unsigned int n, ...)
 
 
 	{
-		int sum = 0, i = 0;
+		unsigned int sum = 0, i = 0;
 
 		va_list ptr;
 
@@ -32,6 +32,5 @@ int sum_them_all(const unsigned int n, ...)
 
 	return (sum);
 	}
-
 
 }
