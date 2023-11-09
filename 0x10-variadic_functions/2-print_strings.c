@@ -18,14 +18,13 @@ else
 va_list ptr;
 va_start(ptr, n);
 
-
 for (i = 0; i < n ; i++)
 {
 	char *str = va_arg(ptr, char *);
 
 	if (str == NULL)
 	{
-		printf("nill");
+		printf("(nill)");
 	}
 
 	else
