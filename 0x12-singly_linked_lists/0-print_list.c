@@ -5,7 +5,6 @@
 /**
  * _strlen - a function.
  * @stringg: string.
- * @i: int.
  * Return: E.
 */
 int _strlen(char *stringg)
@@ -29,7 +28,7 @@ int _strlen(char *stringg)
 /**
  * print_list - a function.
  * @h: int.
- * Return: E.
+ * Return: i.
 */
 
 size_t print_list(const list_t *h)
