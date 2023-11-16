@@ -8,7 +8,7 @@
  * @i: int.
  * Return: E.
 */
-int _strlen(char *stringg)
+int _strlen(const char *stringg)
 {
 	int i = 0;
 
