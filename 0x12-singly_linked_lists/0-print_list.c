@@ -1,6 +1,6 @@
 
 #include <stdio.h>
-#include <lists.h>
+#include "lists.h"
 
 /**
  * _strlen - a function.
@@ -8,7 +8,7 @@
  * @i: int.
  * Return: E.
 */
-int _strlen(const char *stringg)
+int _strlen(char *stringg)
 {
 	int i = 0;
 
@@ -28,9 +28,7 @@ int _strlen(const char *stringg)
 
 /**
  * print_list - a function.
- * @str: list.
  * @h: int.
- * @list_t: a struct.
  * Return: E.
 */
 
@@ -42,7 +40,7 @@ size_t print_list(const list_t *h)
 	{
 		if (h->str == NULL)
 		{
-			printf("(nil)");
+			printf("[0] (nil)\n");
 		}
 		else
 		{
@@ -50,7 +48,6 @@ size_t print_list(const list_t *h)
 		}
 		h = h->next;
 		i++;
-
-
 	}
+	return (i);
 }
