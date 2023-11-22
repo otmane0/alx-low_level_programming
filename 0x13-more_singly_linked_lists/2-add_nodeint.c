@@ -16,13 +16,10 @@ listint_t *add_nodeint(listint_t **head, const int n)
 		return (NULL);
 	}
 
-		first_node->next = NULL;
-		first_node->n = n;
-		if (*head != NULL)
-		{
-			first_node->next = *head;
-			*head = first_node;
-			return (first_node);
-		}
+	first_node->n = n;
+	first_node->next = *head;
+	*head = first_node;
+
+	return (first_node);
 
 }
