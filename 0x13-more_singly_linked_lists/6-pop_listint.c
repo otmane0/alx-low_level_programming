@@ -1,27 +1,23 @@
-#include <stdlib.h>
 #include "lists.h"
 
 /**
- * pop_listint - func
- * @head: array
- * Return: 0
+ * pop_listint - singly linked list
+ * @head: integer
+ * Return: singly linked list node structure
  */
+
 int pop_listint(listint_t **head)
 {
-	int num;
-	listint_t *node;
+	if (*head == NULL)
+		return (0);
+	int data = (*head)->n;
 
-		if (head == NULL || *head == NULL)
-		{
-			return (0);
-		}
-		else
-		{
-		node = *head;
-		num = node->n;
-		*head = node->next;
-		free(node);
-		}
+	listint_t *temp = *head;
 
-	return (num);
+	*head = (*head)->next;
+	free(temp);
+	return (data);
+
+
 }
+
