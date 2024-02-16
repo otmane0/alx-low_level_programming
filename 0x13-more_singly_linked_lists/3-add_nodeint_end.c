@@ -1,40 +1,34 @@
 #include "lists.h"
 
 /**
- * add_nodeint_end - func.
- * @head: head.
- * @n: num.
- * Return: 0
-*/
+ * add_nodeint - singly linked list
+ * @head: integer
+ * @n: num
+ * Return: singly linked list node structure
+ */
+
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-		listint_t *last_node = malloc(sizeof(listint_t));
-		listint_t *node;
+	listint_t *new_node = malloc(sizeof(listint_t));
+	listint_t *last_node = *head;
 
-	if (head == NULL || last_node == NULL)
+	if (new_node == NULL)
 	{
 		return (NULL);
 	}
-	last_node->next = NULL;
-	last_node->n = n;
+	new_node->n = n;
+	new_node->next = NULL;
 	if (*head == NULL)
-	*head = last_node;
-	else
 	{
-		node = *head;
-
-		while (node->next != NULL)
-
-		{
-			node = node->next;
-		}
-			node->next = last_node;
+		*head = new_node;
+		return (new_node);
 	}
+	while (last_node->next != NULL)
+	{
+		last_node = last_node->next;
+	}
+	last_node->next = new_node;
 
-
-
-
-	return (last_node);
-
+	return (new_node);
 }
