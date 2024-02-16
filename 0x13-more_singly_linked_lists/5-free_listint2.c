@@ -1,24 +1,20 @@
-#include <stdlib.h>
 #include "lists.h"
 
 /**
- * free_listint2 - func.
- * @head: array.
+ * free_listint2 - singly linked list
+ * @head: integer
  */
+
 void free_listint2(listint_t **head)
 {
 	listint_t *temp;
 
-		if (head == NULL || *head == NULL)
-
-		return;
-
-		while (*head != NULL)
-		{
-			temp = *head;
-			*head = (*head)->next;
-			free(temp);
-		}
+	while (*head != NULL)
+	{
+		temp = (*head)->next;
+		free(*head);
+		*head = temp;
+	}
 
 	*head = NULL;
 }
