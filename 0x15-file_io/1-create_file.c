@@ -12,17 +12,18 @@
  *         -1 if file cannot be written.
  */
 
+
 int create_file(const char *filename, char *text_content)
 {
-	int fd;
-	ssize_t len = 0;
-	ssize_t bytes_written;
+	FILE *file;
+	size_t len = 0;
+	size_t bytes_written;
 
 	if (filename == NULL)
 		return (-1);
 
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
-	if (fd == -1)
+	file = fopen(filename, "w");
+	if (file == NULL)
 		return (-1);
 
 	if (text_content != NULL)
@@ -30,15 +31,15 @@ int create_file(const char *filename, char *text_content)
 		while (text_content[len])
 			len++;
 
-		bytes_written = write(fd, text_content, len);
-		if (bytes_written == -1 || (size_t)bytes_written != len)
+		bytes_written = fwrite(text_content, sizeof(char), len, file);
+		if (bytes_written != len)
 		{
-			close(fd);
+			fclose(file);
 			return (-1);
 		}
 	}
 
-	close(fd);
+	fclose(file);
 
 	return (1);
 }
