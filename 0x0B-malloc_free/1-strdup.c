@@ -27,7 +27,7 @@ char *_strdup(char *str)
 
 		else
 		{
-			while (j < i - 1)
+			while (j <= i)
 
 			{
 				array[j] = str[j];
