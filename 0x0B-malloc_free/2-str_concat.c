@@ -8,33 +8,53 @@
  *
  * Return: pointer to newly allocated space containing
  * the concatenated string, or NULL on failure
+ *
  */
 
 char *str_concat(char *s1, char *s2)
 {
-	char *concatenated;
-	unsigned int len1 = 0, len2 = 0, i, j;
+	int i = 0, j = 0, t = 0, n = 0;
+	char *str;
 
-	if (s1 == NULL)
+
+
+	if (!s1)
 		s1 = "";
-	if (s2 == NULL)
+
+	if (!s2)
 		s2 = "";
 
-	while (s1[len1] != '\0')
-		len1++;
-	while (s2[len2] != '\0')
-		len2++;
 
-	concatenated = malloc((len1 + len2 + 1) * sizeof(char));
 
-	if (concatenated == NULL)
+	while(s1[i] != '\0')
+	{
+		i++;
+	}
+
+	while(s2[j] != '\0')
+	{
+		j++;
+	}
+
+	t = i + j;
+
+	str = malloc((t + 1) * sizeof(char));
+	if (!str)
 		return (NULL);
-	for (i = 0; i < len1; i++)
-		concatenated[i] = s1[i];
-	for (j = 0; j < len2; j++, i++)
-		concatenated[i] = s2[j];
 
-	concatenated[i] = '\0';
+	while (n < i)
+	{
+		str[n] = s1[n];
+		n++;
+	}
+	n = 0;
+	while (n < j)
+	{
+		str[i + n] = s2[n];
+		n++;
+	}
+	str[t] = '\0';
 
-	return (concatenated);
+	return (str);
+
 }
