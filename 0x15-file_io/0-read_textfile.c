@@ -29,16 +29,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
         return (0);
     }
     r_byt = fread(array, sizeof(char), letters, fd);
-    if (!r_byt || r_byt == 0)
+    if (r_byt == 0)
     {
         free(array);
         fclose(fd);
         return(0);
     }
-    if (letters > r_byt)
-    {
-        letters = r_byt;
-    }
+
 
     w_byt = fwrite(array, sizeof(char), r_byt, stdout);
     free(array);
@@ -52,13 +49,4 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 }
 
-/**
- * Write a function that reads a text file and prints it to the POSIX standard output.
 
-Prototype: ssize_t read_textfile(const char *filename, size_t letters);
-where letters is the number of letters it should read and print
-returns the actual number of letters it could read and print
-if the file can not be opened or read, return 0
-if filename is NULL return 0
-if write fails or does not write the expected amount of bytes, return 0
-*/
